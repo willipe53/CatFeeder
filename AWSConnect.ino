@@ -6,7 +6,7 @@ void connectAWS() {
   Serial.println("Connecting to Wi-Fi");
 
   //Wait for WiFi connection
-  while (WiFi.status() != WL_CONNECTED){
+  while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
