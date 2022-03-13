@@ -28,7 +28,7 @@ Servo wristServo;
 Servo servoMotor[] = {shoulderServo, elbowServo, wristServo};
 
 int servoPins[]    = {A0, A5, A1};
-String servoNames[] = { "Shoulder", "Elbow", "Wrist"};
+String servoNames[] = {"Shoulder", "Elbow", "Wrist"};
 bool isLocked = false;
 int buttonState;
 bool servosOn = false;
@@ -91,7 +91,7 @@ void setup() {
   connectAWS();
   ESP32PWM::allocateTimer(0);
   ESP32PWM::allocateTimer(1);
-  ESP32PWM::allocateTimer(1);
+  ESP32PWM::allocateTimer(2);
   initServos();
   pinMode(LED, OUTPUT);
   pinMode(BUTTON, INPUT_PULLUP);
@@ -103,7 +103,7 @@ void setup() {
 }
 
 void loop() {
-  //send status to AWS IoT
+  //send status to AWS IoT (not implemented yet)
   //publishStatus();
   //delay(4000);
   
