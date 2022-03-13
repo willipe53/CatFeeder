@@ -17,6 +17,8 @@ void jiggleShoulder() {
     moveServo(SHOULDER, servoSide+400);
     delay(500);
   }
+  moveServo(SHOULDER, servoSide);
+  delay(500);
 }
 
 void moveElbowWrist(int valu) {
